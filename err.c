@@ -8,7 +8,7 @@
 #include <string.h>
 #include "err.h"
 
-extern int sys_nerr;
+//extern int sys_nerr;
 
 void syserr(const char *fmt, ...)
 {
