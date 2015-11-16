@@ -1,4 +1,4 @@
-all: ToONP process_w
+all: ToONP W
 
 ToONP: ToONP.o err.o
 	cc -Wall -std=c99 -o ToONP ToONP.o err.o
@@ -6,14 +6,14 @@ ToONP: ToONP.o err.o
 ToONP.o: ToONP.c err.h
 	cc -Wall -std=c99 -c ToONP.c
 
-process_w: process_w.o err.o
-	cc -Wall -std=c99 -o process_w process_w.o err.o
+W: W.o err.o
+	cc -Wall -std=c99 -o W W.o err.o
 
-process_w.o: process_w.c err.h
-	cc -Wall -std=c99 -c process_w.c
+W.o: W.c err.h
+	cc -Wall -std=c99 -c W.c
 
 err.o: err.c err.h
 	cc -Wall -c err.c
 
 clean:
-	rm -f *.o ToONP process_w
+	rm -f *.o ToONP W
